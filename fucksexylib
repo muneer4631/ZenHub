@@ -1879,7 +1879,7 @@ function Blacklib:Window(gametitle)
 				end)
 				UserInputService.InputBegan:Connect(function(current, pressed)
 					if not pressed then
-						if current.KeyCode.Name == Key then
+                    if current.KeyCode.Name ~= Key then
 							pcall(callback)
 						end
 					end
